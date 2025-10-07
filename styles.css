@@ -85,7 +85,14 @@ body {
 .company-tagline {
     color: var(--gold);
     font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.company-address {
+    color: #ccc;
+    font-size: 12px;
     margin-bottom: 20px;
+    line-height: 1.4;
 }
 
 .invoice-title {

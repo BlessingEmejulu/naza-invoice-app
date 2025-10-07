@@ -163,7 +163,12 @@ class InvoiceApp {
                                     <img src="logo.jpg" alt="Naza Cleaning Service" style="width:100%;height:100%;object-fit:cover;border-radius:8px" onerror="this.style.display='none'; this.parentNode.innerHTML='LOGO'">
                                 </div>
                                 <div style="font-size:28px;font-weight:bold;margin-bottom:5px">NAZA CLEANING SERVICE</div>
-                                <div style="color:#FFD700;font-size:14px">Professional Cleaning Solutions</div>
+                                <div style="color:#FFD700;font-size:14px;margin-bottom:10px">Professional Cleaning Solutions</div>
+                                <div style="color:#ccc;font-size:12px;line-height:1.4">
+                                    Lagos Island Orchid<br>
+                                    Victoria Crest 2 Estate<br>
+                                    House 4 Pacific Shelter
+                                </div>
                             </div>
                             <div style="text-align:right">
                                 <h1 style="font-size:36px;font-weight:300;margin:0 0 5px 0">INVOICE</h1>
