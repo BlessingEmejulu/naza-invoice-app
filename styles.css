@@ -349,3 +349,100 @@ button {
         width: 100%;
     }
 }
+/* Mobile Responsive Styles */
+@media (max-width: 600px) {
+    body {
+        padding: 5px;
+    }
+    .app {
+        max-width: 100%;
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .invoice-header {
+        padding: 24px 10px 40px;
+    }
+    .company-logo {
+        width: 44px;
+        height: 44px;
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+    .company-name {
+        font-size: 18px;
+        margin-bottom: 3px;
+    }
+    .company-tagline {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+    .company-address {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    .invoice-title {
+        position: static;
+        text-align: left;
+        margin-top: 10px;
+        right: unset;
+        top: unset;
+    }
+    .invoice-title h1 {
+        font-size: 22px;
+        margin-bottom: 2px;
+    }
+    .invoice-number, .invoice-date {
+        font-size: 11px;
+    }
+    .invoice-body {
+        padding: 10px;
+    }
+    .section-row {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .bill-to-section, .payment-info {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .table-container {
+        margin-bottom: 10px;
+        border-radius: 4px;
+    }
+    table {
+        font-size: 12px;
+    }
+    .table-header th {
+        padding: 8px;
+        font-size: 10px;
+    }
+    tbody td {
+        padding: 7px 8px;
+        font-size: 11px;
+    }
+    .totals-section {
+        max-width: 100%;
+        margin-left: 0;
+        border-radius: 4px;
+    }
+    .total-row {
+        padding: 7px 8px;
+        font-size: 12px;
+    }
+    .total-row.final {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .controls {
+        flex-direction: column;
+        gap: 7px;
+        margin-top: 15px;
+    }
+    button {
+        padding: 10px 0;
+        font-size: 13px;
+        width: 100%;
+    }
+}
