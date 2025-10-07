@@ -1,0 +1,344 @@
+/* Naza Cleaning Service Invoice - Styles */
+:root {
+    --primary: #000000;
+    --gold: #FFD700;
+    --dark-gold: #B8860B;
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --text-dark: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f0f0;
+    color: var(--text-dark);
+    padding: 20px;
+}
+
+.app {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Design with Curved Wave */
+.invoice-header {
+    position: relative;
+    background: linear-gradient(135deg, var(--primary) 0%, #333 100%);
+    color: white;
+    padding: 40px 30px 60px;
+    overflow: hidden;
+}
+
+.invoice-header::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: var(--gold);
+    clip-path: ellipse(100% 100% at 50% 0%);
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.company-logo {
+    width: 60px;
+    height: 60px;
+    background: var(--gold);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.company-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.company-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.company-tagline {
+    color: var(--gold);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.invoice-title {
+    position: absolute;
+    right: 30px;
+    top: 40px;
+    text-align: right;
+}
+
+.invoice-title h1 {
+    font-size: 36px;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.invoice-number {
+    font-size: 14px;
+    color: var(--gold);
+}
+
+.invoice-date {
+    font-size: 12px;
+    color: #ccc;
+}
+
+/* Form Section */
+.invoice-body {
+    padding: 30px;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+.bill-to-section {
+    background: var(--light-gray);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.section-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.section-col {
+    flex: 1;
+}
+
+.section-col.narrow {
+    flex: 0 0 200px;
+}
+
+/* Payment Info Box */
+.payment-info {
+    background: var(--light-gray);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.payment-info h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.payment-info p {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 3px;
+}
+
+/* Labels and Inputs */
+label {
+    display: block;
+    font-size: 11px;
+    color: var(--primary);
+    margin-bottom: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+input[type=text], 
+input[type=date], 
+textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background: white;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+}
+
+/* Services Table */
+.services-section {
+    margin-top: 30px;
+}
+
+.table-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-header {
+    background: var(--primary);
+    color: white;
+}
+
+.table-header th {
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table-header th:last-child {
+    text-align: right;
+}
+
+tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody td {
+    padding: 12px 15px;
+    font-size: 14px;
+}
+
+tbody td:first-child {
+    font-weight: 500;
+}
+
+tbody td:last-child {
+    text-align: right;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+tbody td.amount {
+    background: #fafafa;
+    cursor: pointer;
+}
+
+tbody td.amount:hover {
+    background: #f0f0f0;
+}
+
+/* Totals Section */
+.totals-section {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+    max-width: 300px;
+    margin-left: auto;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.total-row:last-child {
+    border-bottom: none;
+    background: var(--primary);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.total-row.final {
+    background: var(--primary);
+    color: white;
+    padding: 15px;
+}
+
+/* Controls */
+.controls {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    
+    .app > *:not(.invoice-print) {
+        display: none;
+    }
+    
+    .invoice-print {
+        display: block;
+        width: 100%;
+    }
+}

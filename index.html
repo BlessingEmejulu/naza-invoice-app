@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Naza Cleaning Service — Invoice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Invoice Header with Logo and Company Info -->
+        <div class="invoice-header">
+            <div class="header-content">
+                <div class="company-logo">
+                    <img src="logo.jpg" alt="Naza Cleaning Service" onerror="this.style.display='none'; this.parentNode.innerHTML='LOGO'">
+                </div>
+                <div class="company-name">NAZA CLEANING SERVICE</div>
+                <div class="company-tagline">Professional Cleaning Solutions</div>
+                <div class="company-address">Lagos Island Orchid, Victoria crest 2 estate, House 4 Pacific shelter</div>
+
+            </div>
+            <div class="invoice-title">
+                <h1>INVOICE</h1>
+                <div class="invoice-number" id="invoiceDisplay">Invoice Number: INV-25-001</div>
+                <div class="invoice-date" id="dateDisplay">Date: April 22, 2025</div>
+            </div>
+        </div>
+
+        <!-- Invoice Body -->
+        <div class="invoice-body">
+            <form id="invoice-form">
+                <!-- Bill To and Payment Info Section -->
+                <div class="section-row">
+                    <div class="section-col">
+                        <div class="bill-to-section">
+                            <label>Bill To:</label>
+                            <input id="clientName" type="text" placeholder="Client or Company Name" required>
+                            <input id="clientAddress" type="text" placeholder="Address" style="margin-top:8px">
+                            <input id="clientEmail" type="text" placeholder="Email / Contact" style="margin-top:8px">
+                        </div>
+                    </div>
+                    <div class="section-col narrow">
+                        <div class="payment-info">
+                            <h4>PAYMENT INFORMATION:</h4>
+                            <p><strong>Bank:</strong> OPay</p>
+                            <p><strong>Name:</strong> Nwameli Chinaza Cynthia</p>
+                            <p><strong>Account:</strong> 9030882494</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Invoice Details -->
+                <div class="section-row">
+                    <div class="section-col">
+                        <label for="invoiceNo">Invoice Number</label>
+                        <input id="invoiceNo" type="text">
+                    </div>
+                    <div class="section-col">
+                        <label for="invoiceDate">Invoice Date</label>
+                        <input id="invoiceDate" type="date">
+                    </div>
+                    <div class="section-col">
+                        <label for="dueDate">Due Date</label>
+                        <input id="dueDate" type="date">
+                    </div>
+                </div>
+
+                <!-- Services Table -->
+                <div class="services-section">
+                    <div class="table-container">
+                        <table id="itemsTable">
+                            <thead class="table-header">
+                                <tr>
+                                    <th style="width:60px">ITEM</th>
+                                    <th>DESCRIPTION</th>
+                                    <th style="width:100px">RATE</th>
+                                    <th style="width:100px">AMOUNT</th>
+                                </tr>
+                            </thead>
+                            <tbody id="itemsBody">
+                                <tr>
+                                    <td>1</td>
+                                    <td>Post Construction Cleaning</td>
+                                    <td>₦0</td>
+                                    <td class="amount" contenteditable="true">₦0</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Deep Cleaning</td>
+                                    <td>₦0</td>
+                                    <td class="amount" contenteditable="true">₦0</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Regular Cleaning</td>
+                                    <td>₦0</td>
+                                    <td class="amount" contenteditable="true">₦0</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Fumigation</td>
+                                    <td>₦0</td>
+                                    <td class="amount" contenteditable="true">₦0</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Upholstery Cleaning</td>
+                                    <td>₦0</td>
+                                    <td class="amount" contenteditable="true">₦0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Totals Section -->
+                    <div class="totals-section">
+                        <div class="total-row">
+                            <span>Sub Total:</span>
+                            <span id="subTotal">₦0</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Sales Tax:</span>
+                            <span>₦0</span>
+                        </div>
+                        <div class="total-row final">
+                            <span>TOTAL:</span>
+                            <span id="grandTotal">₦0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button type="button" id="previewBtn" class="btn-primary">Preview & Print</button>
+                    <button type="button" id="resetForm" class="btn-secondary">Reset Form</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="invoice-print" id="printArea"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
