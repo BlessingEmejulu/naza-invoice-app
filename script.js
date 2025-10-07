@@ -129,12 +129,11 @@ class InvoiceApp {
     generateServicesTableHTML() {
         return Array.from(document.querySelectorAll('#itemsBody tr'))
             .map((row, index) => {
-                const amount = row.children[3].textContent;
+                const amount = row.children[2].textContent;
                 return amount !== '₦0' ? `
                     <tr style="border-bottom:1px solid #eee">
                         <td style="padding:12px 15px;font-size:14px">${index + 1}</td>
                         <td style="padding:12px 15px;font-size:14px;font-weight:500">${row.children[1].textContent}</td>
-                        <td style="padding:12px 15px;font-size:14px;text-align:right">${amount}</td>
                         <td style="padding:12px 15px;font-size:14px;text-align:right;font-weight:bold;color:#000">${amount}</td>
                     </tr>
                 ` : '';
@@ -194,6 +193,7 @@ class InvoiceApp {
                         <div style="flex:0 0 250px">
                             <div style="background:#f5f5f5;padding:15px;border-radius:8px">
                                 <h4 style="color:#000;margin:0 0 10px 0;font-size:14px;font-weight:bold">PAYMENT INFORMATION:</h4>
+                                <p style="margin:3px 0;font-size:12px;color:#d32f2f;font-weight:bold">⚠️ Payment must be made before service</p>
                                 <p style="margin:3px 0;font-size:12px"><strong>Bank:</strong> OPay</p>
                                 <p style="margin:3px 0;font-size:12px"><strong>Name:</strong> Nwameli Chinaza Cynthia</p>
                                 <p style="margin:3px 0;font-size:12px"><strong>Account:</strong> 9030882494</p>
@@ -212,7 +212,6 @@ class InvoiceApp {
                                 <tr>
                                     <th style="padding:15px;text-align:left;font-weight:bold;font-size:12px;width:60px">ITEM</th>
                                     <th style="padding:15px;text-align:left;font-weight:bold;font-size:12px">DESCRIPTION</th>
-                                    <th style="padding:15px;text-align:right;font-weight:bold;font-size:12px;width:100px">RATE</th>
                                     <th style="padding:15px;text-align:right;font-weight:bold;font-size:12px;width:100px">AMOUNT</th>
                                 </tr>
                             </thead>
@@ -227,10 +226,6 @@ class InvoiceApp {
                         <div style="display:flex;justify-content:space-between;padding:10px 15px;border-bottom:1px solid #eee">
                             <span>Sub Total:</span>
                             <span>${this.subTotal.textContent}</span>
-                        </div>
-                        <div style="display:flex;justify-content:space-between;padding:10px 15px;border-bottom:1px solid #eee">
-                            <span>Sales Tax:</span>
-                            <span>₦0</span>
                         </div>
                         <div style="display:flex;justify-content:space-between;padding:15px;background:#000;color:white;font-weight:bold;font-size:16px">
                             <span>TOTAL:</span>
